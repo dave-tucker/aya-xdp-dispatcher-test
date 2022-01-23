@@ -1,0 +1,28 @@
+[package]
+name = "dispatcher-test-ebpf"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+aya-bpf = { git = "http://github.com/aya-rs/aya", branch = "main" }
+dispatcher-test-common = { path = "../dispatcher-test-common" }
+
+[[bin]]
+name = "dispatcher-test"
+path = "src/main.rs"
+
+[[bin]]
+name = "pass"
+path = "src/pass.rs"
+
+[profile.dev]
+panic = "abort"
+opt-level = 2
+overflow-checks = false
+
+[profile.release]
+debug = 2
+panic = "abort"
+
+[workspace]
+members = []
