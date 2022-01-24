@@ -1,10 +1,2 @@
 [workspace]
 members = ["dispatcher-test", "dispatcher-test-common", "xtask"]
-
-# TODO delete this when my patch is merged upstream
-[patch.crates-io]
-aya = {path = "../aya/aya" }
-
-# TODO delete this when my patch is merged upstream
-[patch."http://github.com/aya-rs/aya"]
-aya = {path = "../aya/aya" }
